@@ -1,0 +1,108 @@
+TIME TABLE FOR BTECH ICT:
+
+Time Slot	         Monday		        Tuesday		      Wednesday		       Thursday		         Friday		
+ 8am - 9am
+(Semester 2)	     HM106[LT1](PD)	     HM106[LT1](PD)	     HM106[LT1](PD)	     IC121[LT1](SR)	     IC121[LT1](SR)	
+
+(Semester 4)	     HM116[LT2](GU)	     HM116[LT2](GU)	     HM116[LT2](GU)	     IT214[LT2](PMJ)	     IT214[LT2](PMJ)	
+
+(Semester 6)	     SC407[LT3](YV)	     SC407[LT3](YV)	     SC407[LT3](YV)	     IE406[LT3](SM)	     IE406[LT3](SM)	
+
+(Semester 8)	     CT476[CEP102](PK)	     CT476[CEP102](PK)	     CT476[CEP102](PK)	     CT548[CEP102](MK2)	     CT548[CEP102](MK2)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+9am - 10am
+(Semester 2)	     IC121[LT1](SR)	     IT205[LT1](SDG)	     IT205[LT1](SDG)	     IT205[LT1](SDG)	     IT206[LT1](PhD)	
+
+(Semester 4)	     IT214[LT2](PMJ)	     EL203[LT2](SR)	     EL203[LT2](SR)	     EL203[LT2](SR)	     CT216[LT2](YV)	
+
+(Semester 6)	     IE406[LT3](SM)	     IE410[LT3](TKM)	     IE410[LT3](TKM)	     IE410[LT3](TKM)	     IE411[LT3](AMM)	
+
+(Semester 8)	     CT548[CEP102](MK2)	     CT491[CEP102](DKG)	     CT491[CEP102](DKG)	     CT491[CEP102](DKG)	     IT583[CEP102](BG)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+10am - 11am
+(Semester 2)	     SC205[LT1](AT2)	     SC205[LT1](AT2)	     SC205[LT1](AT2)	     SC217[LT1](GD)	     SC217[LT1](GD)	
+
+(Semester 4)	     CT216[LT2](YV)	     CT216[LT2](YV)	     SC224[LT2](MS)	     SC224[LT2](MS)	     SC224[LT2](MS)	
+
+(Semester 6)	     IE411[LT3](AMM)	     IE411[LT3](AMM)	     IE403[LT3](BK)	     IE403[LT3](BK)	     IE403[LT3](BK)	
+
+(Semester 8)	     IT583[CEP102](BG)	     IT583[CEP102](BG)	     IT544[CEP102](MLD)	     IT544[CEP102](MLD)	     IT544[CEP102](MLD)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+11am - 12pm
+(Semester 2)	     SC217[LT1](GD)	    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 4)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 6)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 8)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+------------------------------------------------------------------------------------------------------------------------------------------
+12pm - 1pm
+(Semester 2)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 4)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 6)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 8)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+------------------------------------------------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
+
+TIME TABLE FOR BTECH MnC:
+
+Time Slot	         Monday		        Tuesday		      Wednesday		       Thursday		         Friday		
+ 8am - 9am
+(Semester 1)	     HM106[CEP110](RBB)	     HM106[CEP110](RBB)	     HM106[CEP110](RBB)	     MC215[CEP110](SB2)	     MC215[CEP110](SB2)	
+
+(Semester 3)	     MC221[CEP111](GP)	     MC221[CEP111](GP)	     MC221[CEP111](GP)	     MC222[CEP111](NKS)	     MC222[CEP111](NKS)	
+
+(Semester 5)	     MC321[CEP112](PA)	     MC321[CEP112](PA)	     MC321[CEP112](PA)	     CT476[CEP112](PK)	     CT476[CEP112](PK)	
+
+(Semester 7)	     EL464[CEP113](SR)	     EL464[CEP113](SR)	     EL464[CEP113](SR)	     EL495[CEP113](VSP)	     EL495[CEP113](VSP)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+9am - 10am
+(Semester 1)	     MC215[CEP110](SB2)	     MC122[CEP110](NM)	     MC122[CEP110](NM)	     MC125[CEP110](MS)	     MC125[CEP110](MS)	
+
+(Semester 3)	     MC222[CEP111](NKS)	     MC223[CEP111](PB)	     MC223[CEP111](PB)	     MC223[CEP111](PB)	     MC224[CEP111](VS)	
+
+(Semester 5)	     CT476[CEP112](PK)	     CT491[CEP112](DKG)	     CT491[CEP112](DKG)	     CT491[CEP112](DKG)	     SC402[CEP112](MKG)	
+
+(Semester 7)	     EL495[CEP113](VSP)	     IT492[CEP113](AR2)	     IT492[CEP113](AR2)	     IT492[CEP113](AR2)	     IT449[CEP113](PB)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+10am - 11am
+(Semester 1)	     MC125[CEP110](MS)	     MC124[CEP110](RM2)	     MC124[CEP110](RM2)	     MC124[CEP110](RM2)	    	FREE		
+
+(Semester 3)	     MC224[CEP111](VS)	     MC224[CEP111](VS)	     MC225[CEP111](SK)	     MC225[CEP111](SK)	     MC225[CEP111](SK)	
+
+(Semester 5)	     SC402[CEP112](MKG)	     SC402[CEP112](MKG)	     SC471[CEP112](MT)	     SC471[CEP112](MT)	     SC471[CEP112](MT)	
+
+(Semester 7)	     IT449[CEP113](PB)	     IT449[CEP113](PB)	     SC474[CEP113](AKR)	     SC474[CEP113](AKR)	     SC474[CEP113](AKR)	
+
+------------------------------------------------------------------------------------------------------------------------------------------
+11am - 12pm
+(Semester 1)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 3)	     MC226[CEP111](RG)	     MC226[CEP111](RG)	    	FREE		    	FREE		    	FREE		
+
+(Semester 5)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 7)	     HM481[CEP113](BK)	     HM481[CEP113](BK)	     HM481[CEP113](BK)	    	FREE		    	FREE		
+
+------------------------------------------------------------------------------------------------------------------------------------------
+12pm - 1pm
+(Semester 1)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 3)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 5)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+(Semester 7)	    	FREE		    	FREE		    	FREE		    	FREE		    	FREE		
+
+------------------------------------------------------------------------------------------------------------------------------------------
