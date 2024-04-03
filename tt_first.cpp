@@ -22,7 +22,14 @@ public:
     int total_lectures;
     int odd_even_sem;//Ask user if timetable is for even sem or odd sem
     vector<string> classrooms;
+        // Define time slots (rows) from 8am to 1pm
+    vector<string> time_slots = {"8am - 9am", "9am - 10am", "10am - 11am", "11am - 12pm", "12pm - 1pm"};
 
+    // Days (columns) from Monday to Friday
+    vector<string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+    // We initialize the timetable grid,three strings in tuple are course_id, classroom and faculty
+    vector<vector<vector<tuple<string, string, string>>>> timetable;
+    
     TTGen()
     {
         cout << "ENTER 1 for Autumn Semester and 2 for Winter Semester:" << endl;
@@ -35,6 +42,7 @@ public:
             cin >> t;
             classrooms.push_back(t);
         }
+        timetable.resize(time_slots.size() * 4, vector<vector<tuple<string, string, string>>>(days.size()));
     }
     void input()
     {
@@ -81,14 +89,9 @@ public:
     }
 void generateTimetable()
 {
-    // Define time slots (rows) from 8am to 1pm
-    vector<string> time_slots = {"8am - 9am", "9am - 10am", "10am - 11am", "11am - 12pm", "12pm - 1pm"};
 
-    // Days (columns) from Monday to Friday
-    vector<string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
-    // We initialize the timetable grid,three strings in tuple are course_id, classroom and faculty
-    vector<vector<vector<tuple<string, string, string>>>> timetable(time_slots.size() * 4, vector<vector<tuple<string, string, string>>>(days.size()));
+    
 
     // We have counters to keep track of lectures assigned for each course, initially set to 0
     vector<vector<int>> lectures_assigned(courses.size(), vector<int>(courses[0].size(), 0));
@@ -229,6 +232,33 @@ void generateTimetable()
             cout << "Error: Unable to write to the file." << endl;
         }
     }
+    void displayFacultySchedule(const string& faculty_name) const 
+    {
+        cout << "Timetable for Faculty: " << faculty_name << endl;
+        for (int i = 0; i < time_slots.size(); ++i) 
+        {
+            for (int j = 0; j < days.size(); ++j) 
+            {
+                bool found = false;
+                for (int semester = 0; semester < 4; ++semester) 
+                {
+                    for (const auto& slot : timetable[4 * i + semester][j]) 
+                    {
+                        if (get<2>(slot) == faculty_name) //Finding matching slot for input faculty
+                        {
+                            if (!found) 
+                            {
+                                cout << "Time Slot: " << time_slots[i] << ", Day: " << days[j] << endl;
+                                found = true;
+                            }
+                            cout << "Course: " << get<0>(slot) << ", Classroom: " << get<1>(slot) << endl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 };
 
@@ -251,4 +281,5 @@ int main()
     t2.input();
     outfile << "TIME TABLE FOR BTECH MnC:"<<endl<<endl;
     t2.generateTimetable();
+    t1.displayFacultySchedule("SR");
 }
