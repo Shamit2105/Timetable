@@ -14,15 +14,14 @@ using namespace std;
 class TTGen
 {
 public:
-    vector<vector<string>> courses;
+    vector<vector<string>> courses;//Course no. eg PC110
     vector<vector<string>> course_name;
     vector<vector<string>> credits;
     vector<vector<string>> faculty;
-    vector<vector<int>> no_of_hours;
+    vector<vector<int>> no_of_hours;//To be extracted from credits by converting the first character of each credit into string
     int total_lectures;
-    int odd_even_sem;
+    int odd_even_sem;//Ask user if timetable is for even sem or odd sem
     vector<string> classrooms;
-    int classroom_index; // Index to keep track of assigned classrooms
 
     TTGen()
     {
@@ -36,7 +35,6 @@ public:
             cin >> t;
             classrooms.push_back(t);
         }
-        classroom_index=0;
     }
     void input()
     {
@@ -45,7 +43,7 @@ public:
         credits.resize(4);
         faculty.resize(4);
         no_of_hours.resize(4);
-        int oes=odd_even_sem;
+        int oes=odd_even_sem;//To print the semester in cmd output
         for (int i = 0; i < 4; i++)
         {
             cout << "Enter Details for Semester " << oes << endl;
@@ -81,95 +79,97 @@ public:
             }
         }
     }
-
-    void generateTimetable() 
-    {
+void generateTimetable()
+{
     // Define time slots (rows) from 8am to 1pm
-        vector<string> time_slots = {"8am - 9am", "9am - 10am", "10am - 11am", "11am - 12pm", "12pm - 1pm"};
+    vector<string> time_slots = {"8am - 9am", "9am - 10am", "10am - 11am", "11am - 12pm", "12pm - 1pm"};
 
-        // Define days (columns) from Monday to Friday
-        vector<string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+    // Days (columns) from Monday to Friday
+    vector<string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
-        // Initialize the timetable grid
-        vector<vector<vector<tuple<string, string, string>>>> timetable(time_slots.size() * 4, vector<vector<tuple<string, string, string>>>(days.size()));
+    // We initialize the timetable grid,three strings in tuple are course_id, classroom and faculty
+    vector<vector<vector<tuple<string, string, string>>>> timetable(time_slots.size() * 4, vector<vector<tuple<string, string, string>>>(days.size()));
 
-        // Initialize counters to keep track of lectures assigned for each course
-        vector<vector<int>> lectures_assigned(courses.size(), vector<int>(courses[0].size(), 0));
+    // We have counters to keep track of lectures assigned for each course, initially set to 0
+    vector<vector<int>> lectures_assigned(courses.size(), vector<int>(courses[0].size(), 0));
 
-        // Map to keep track of assigned classrooms for each course
-        map<string, string> assigned_classrooms;
+    // Define a map to store the faculty assigned to each time slot and day
+    map<pair<int, int>, unordered_set<string>> faculty_assigned;
 
-        // Loop through each time slot (row)
-        for (int i = 0; i < time_slots.size(); ++i) 
+// Loop through each time slot (row)
+        for (int i = 0; i < time_slots.size(); ++i)
         {
             // Loop through each semester (subrow)
-            for (int semester = 0; semester < 4; ++semester) 
+            for (int semester = 0; semester < 4; ++semester)
             {
                 string cr = classrooms[semester];
+
                 // Loop through each day (column)
-                for (int j = 0; j < days.size(); ++j) 
+                for (int j = 0; j < days.size(); ++j)
                 {
                     // Assign courses to this time slot, semester, and day
                     bool course_assigned = false;
-                    for (int year = 0; year < courses.size(); ++year) 
+                    for (int all_courses = 0; all_courses < courses.size(); ++all_courses)
                     {
-                        for (int course_index = 0; course_index < courses[year].size(); ++course_index) 
+                        for (int course_index = 0; course_index < courses[all_courses].size(); ++course_index)
                         {
                             // Check if this course belongs to the current semester
-                            if (semester == year) 
+                            if (semester == all_courses)
                             {
                                 // Check if there are remaining lectures for this course
-                                if (lectures_assigned[year][course_index] < no_of_hours[year][course_index]) 
+                                if (lectures_assigned[all_courses][course_index] < no_of_hours[all_courses][course_index])
                                 {
-                                    string course_id = courses[year][course_index];
-                                    // Assign the course to this time slot, semester, and day
-                                    timetable[4 * i + semester][j].push_back({course_id,cr, faculty[year][course_index]});
-                                    lectures_assigned[year][course_index]++;
-                                    course_assigned = true;
-                                    break; // Move to the next semester
+                                    string course_id = courses[all_courses][course_index];
+                                    string faculty_assigned_to_course = faculty[all_courses][course_index];
+                                    
+                                    // Check if the faculty is already assigned to another class on this day and time slot
+                                    if (faculty_assigned[{i, j}].find(faculty_assigned_to_course) != faculty_assigned[{i, j}].end())
+                                    {
+                                        // Swap with a free slot if available
+                                        for (int k = 0; k < time_slots.size(); ++k)
+                                        {
+                                            if (timetable[4 * k + semester][j].size() == 1 && get<0>(timetable[4 * k + semester][j][0]) == "Free")
+                                            {
+                                                // Swap the class
+                                                timetable[4 * k + semester][j][0] = {course_id, cr, faculty_assigned_to_course};
+                                                
+                                                // Update faculty assignment
+                                                faculty_assigned[{i, j}].erase(faculty_assigned_to_course);
+                                                faculty_assigned[{k, j}].insert(faculty_assigned_to_course);
+                                                
+                                                course_assigned = true;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // Assign the course to this time slot, semester, and day
+                                        timetable[4 * i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
+                                        lectures_assigned[all_courses][course_index]++;
+                                        faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
+                                        course_assigned = true;
+                                        break; // Move to the next semester
+                                    }
                                 }
                             }
                         }
-                        if (course_assigned) 
+                        if (course_assigned)
                         {
-                            break; // Move to the next day
+                            break; // Move to the next day, so every day maximum there is only one class of a particular course
                         }
                     }
 
-                    // If no course is assigned, mark this slot as "Free" for this semester
-                    if (!course_assigned) 
+                    // If no course is assigned, mark this slot as "Free" for this particular time_slot and day
+                    if (!course_assigned)
                     {
                         timetable[i * 4 + semester][j].push_back({"Free", "", ""});
                     }
                 }
             }
         }
-        for (int semester = 0; semester < 4; ++semester) 
-        {
-            for (int j = 0; j < days.size(); ++j) 
-            {
-                // Iterate over each time slot except the last one
-                for (int i = 0; i < time_slots.size() - 1; ++i) 
-                {
-                    // Check if the current slot and the next slot both have classes
-                    if (timetable[i * 4 + semester][j].size() == 1 && get<0>(timetable[i * 4 + semester][j][0]) == "Free") 
-                    {
-                        // If the current slot is a free slot, move to the next slot
-                        continue;
-                    }
-
-                    if (timetable[(i + 1) * 4 + semester][j].size() == 1 && get<0>(timetable[(i + 1) * 4 + semester][j][0]) == "Free") 
-                    {
-                        // If the next slot is a free slot, swap the slots
-                        swap(timetable[i * 4 + semester][j], timetable[(i + 1) * 4 + semester][j]);
-                    }
-                }
-            }
-        }
-
-
         // Write the output to a text file
-        ofstream outfile("timetable.txt",ios::app);
+        ofstream outfile("timetable.txt",ios::app);//opening file in append mode
         if (outfile.is_open()) 
         {
             // Write the time slots header with 15 spaces for alignment
@@ -186,9 +186,9 @@ public:
                 if((i%4)+1==1)
                     outfile << setw(10) << time_slots[i / 4];
                     if(odd_even_sem==1)
-                        outfile<<"\n(Semester " << to_string(2*(i % 4) + 1) << ")\t"; // Time slot with semester info
+                        outfile<<"\n(Semester " << to_string(2*(i % 4) + 1) << ")\t"; // Time slot with even semester info
                     else
-                        outfile<<"\n(Semester " << to_string(2*((i % 4)+1)) << ")\t"; // Time slot with semester info
+                        outfile<<"\n(Semester " << to_string(2*((i % 4)+1)) << ")\t"; // Time slot with odd semester info
                 for (int j = 0; j < timetable[i].size(); ++j) 
                 {
                     
@@ -214,7 +214,7 @@ public:
                 if((i%4)+1==4) 
                 {
                     outfile<<endl;
-                    for(int i =0;i<138;i++)
+                    for(int i =0;i<138;i++)//after every time slot, we print a dotted line so that the the timetable.txt file looks organized
                     {
                         outfile<<"-";
                     }
@@ -234,16 +234,21 @@ public:
 
 int main()
 {
-    remove("timetable.txt");
+    remove("timetable.txt");//first we remove any timetable.txt file in our directory
     cout << "ENTER INPUT FOR ICT:"<<endl;
     TTGen t1;
     t1.input();
-    ofstream outfile("timetable.txt",ios::app);
+    ofstream outfile("timetable.txt",ios::app);// we create a new timetable.txt file in our directory everytime we open our code
     outfile << "TIME TABLE FOR BTECH ICT:"<<endl<<endl;
     t1.generateTimetable();
-    for(int i=0;i<138;i++)
+    for(int i=0;i<138;i++)//we print 138 _ so that the reader of our text file can easily notice the partition between two timetables
     {
         outfile<<"_";
     }
     outfile << endl<<endl;
+    cout << "ENTER INPUT FOR MnC:"<<endl;
+    TTGen t2;
+    t2.input();
+    outfile << "TIME TABLE FOR BTECH MnC:"<<endl<<endl;
+    t2.generateTimetable();
 }
