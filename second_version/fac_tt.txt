@@ -1,0 +1,35 @@
+Timetable for Faculty: AM
+Day: Monday
+	Time: 8am - 9am
+	Classroom: LT1
+	Course: PC110[secA]
+
+	Time: 8am - 9am
+	Classroom: LT2
+	Course: PC110[secB]
+
+
+Day: Tuesday
+	Time: 8am - 9am
+	Classroom: LT1
+	Course: PC110[secA]
+
+	Time: 8am - 9am
+	Classroom: LT2
+	Course: PC110[secB]
+
+
+Day: Wednesday
+	Time: 8am - 9am
+	Classroom: LT1
+	Course: PC110[secA]
+
+	Time: 8am - 9am
+	Classroom: LT2
+	Course: PC110[secB]
+
+
+Day: Thursday
+
+Day: Friday
+
