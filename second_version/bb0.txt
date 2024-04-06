@@ -63,7 +63,11 @@ SC107[secB]
 Calculus
 3104
 SB2
-5
+6
+PC110[MnC]
+Language_and_Literature
+3003
+AM
 MC111
 Mathematical_Algorithmic_and_Computational_Thinking
 3104
@@ -134,7 +138,11 @@ PC222[secB]
 Exploration_Project
 0021
 Faculty
-5
+6
+HM216[MnC]
+Science_Technology_and_Society
+3003
+SJ
 MC211
 Functions_of_Several_Variables_and_PDEs
 3104
@@ -299,7 +307,8 @@ EL453
 Nanoelectronics
 3003
 RP
-
+AM
+LT1
 
 
 
