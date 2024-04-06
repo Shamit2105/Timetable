@@ -70,7 +70,9 @@ public:
             }
 
             int num_of_courses;
+            
             cin >> num_of_courses;
+            
             oes+=2;
             courses[i].resize(num_of_courses);
             course_name[i].resize(num_of_courses);
@@ -120,6 +122,7 @@ public:
                     
                     // Assign courses to this time slot, semester, and day
                     bool course_assigned = false;
+                    
                     for (int all_courses = 0; all_courses < courses.size(); ++all_courses)
                     {
                         for (int course_index = 0; course_index < courses[all_courses].size(); ++course_index)
@@ -307,10 +310,39 @@ public:
                         }
                     }
                 }
-                
             }
             outfile << endl;
         }
+            cout << "Faculty Timetable has been written to fac_tt.txt" << endl;
+    }
+    void displayClassroomTimetable(const string& classroom_name) 
+    {
+        ofstream outfile("classroom_tt.txt", ios::app); // Opening file in append mode
+        outfile << "Timetable for Classroom: " << classroom_name << endl;
+
+        for (int j = 0; j < days.size(); ++j) 
+        {
+            outfile << "Day: " << days[j] << endl;
+            for (int i = 0; i < time_slots.size(); ++i) 
+            {
+                bool found = false;
+                for (int semester = 0; semester < 14; ++semester) 
+                {
+                    for (const auto& slot : timetable[14 * i + semester][j]) 
+                    {
+                        if (get<1>(slot) == classroom_name) 
+                        {
+                            outfile << "\tTime: " << time_slots[i] << endl;
+                            outfile << "\tCourse: " << get<0>(slot) << "\n\tFaculty: " << get<2>(slot) << endl;
+                            found = true;
+                            outfile<<endl;
+                        }
+                    }
+                }
+            }
+            outfile << endl;
+        }
+        cout << "Classroom Timetable has been written to classroom_tt.txt" << endl;
     }
 };
 
@@ -318,6 +350,7 @@ int main()
 {
     remove("timetable.txt");//first we remove any timetable.txt file in our 
     remove("fac_tt.txt");
+    remove("classroom_tt.txt");
     TTGen t1;
     t1.input();
     ofstream outfile("timetable.txt",ios::app);// we create a new timetable.txt file in our directory everytime we open our code
@@ -325,6 +358,7 @@ int main()
     {
         outfile<<"-";
     }
+    outfile << endl;
     t1.generateTimetable();
     for(int i=0;i<180;i++)
     {
@@ -335,4 +369,8 @@ int main()
     string fac_in;
     cin >> fac_in;
     t1.displayFacultySchedule(fac_in);
+    cout<< "ENTER CLASSROOM WHOSE TIMETABLE IS TO BE OUTPUTTED:"<<endl;
+    string classroom_in;
+    cin >> classroom_in;
+    t1.displayClassroomTimetable(classroom_in);
 }
