@@ -5,25 +5,25 @@ BTech:
 
 (Semester 1)	       PC110[secA][LT1](AM) 	       PC110[secA][LT1](AM) 	       PC110[secA][LT1](AM) 	       IC101[secA][LT1](AKR) 	       EL111[secA][LT1](SM) 	
 
-		       PC110[secB][LT2](AM) 	       PC110[secB][LT2](AM) 	       PC110[secB][LT2](AM) 	       IC101[secB][LT2](AKR) 	       EL111[secB][LT2](RLD) 	
+		 		FREE		 		FREE		 		FREE		       PC110[secB][LT2](AM) 	       PC110[secB][LT2](AM) 	
 
 		       MC111[CEP202](VS) 	       MC111[CEP202](VS) 	       MC111[CEP202](VS) 	       MC112[CEP202](RP) 	       MC112[CEP202](RP) 	
 
 (Semester 3)	       HM216[secA][LT3](SJ) 	       HM216[secA][LT3](SJ) 	       HM216[secA][LT3](SJ) 	       CT204[secA][LT3](HP) 	       CT204[secA][LT3](HP) 	
 
-		      HM216[secB][CEP102](SJ)	      HM216[secB][CEP102](SJ)	      HM216[secB][CEP102](SJ)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	
+		 		FREE		 		FREE		 		FREE		      HM216[secB][CEP102](SJ)	      HM216[secB][CEP102](SJ)	
 
 		       MC211[CEP203](MS) 	       MC211[CEP203](MS) 	       MC211[CEP203](MS) 	       MC212[CEP203](RC) 	       MC212[CEP203](RC) 	
 
 (Semester 5)	      IT314[secA][CEP110](ST)	      IT314[secA][CEP110](ST)	      IT314[secA][CEP110](ST)	      IT304[secA][CEP110](PKS)	      IT304[secA][CEP110](PKS)	
 
-		      IT314[secB][CEP105](ST)	      IT314[secB][CEP105](ST)	      IT314[secB][CEP105](ST)	      IT304[secB][CEP105](PKS)	      IT304[secB][CEP105](PKS)	
+		 		FREE		 		FREE		 		FREE		      IT314[secB][CEP105](ST)	      IT314[secB][CEP105](ST)	
 
 		       MC311[CEP205](NKS) 	       MC311[CEP205](NKS) 	       MC311[CEP205](NKS) 	       MC312[CEP205](MT) 	       MC312[CEP205](MT) 	
 
 (Semester 7)	      IE407[secA][CEP110](VSP)	      IE407[secA][CEP110](VSP)	      IE407[secA][CEP110](VSP)	      IE406[secA][CEP110](MVJ)	      IE406[secA][CEP110](MVJ)	
 
-		      IE407[secB][CEP112](VSP)	      IE407[secB][CEP112](VSP)	      IE407[secB][CEP112](VSP)	      IE406[secB][CEP112](MVJ)	      IE406[secB][CEP112](MVJ)	
+		 		FREE		 		FREE		 		FREE		      IE407[secB][CEP112](VSP)	      IE407[secB][CEP112](VSP)	
 
 		      IT495(MnC)[CEP206](MKG)	      IT495(MnC)[CEP206](MKG)	      IT495(MnC)[CEP206](MKG)	      IT486(MnC)[CEP206](AMM)	      IT486(MnC)[CEP206](AMM)	
 
@@ -39,33 +39,33 @@ BTech:
 
 (Semester 1)	       EL111[secA][LT1](SM) 	       EL111[secA][LT1](SM) 	       IT112[secA][LT1](BG) 	       IT112[secA][LT1](BG) 	       IT112[secA][LT1](BG) 	
 
-		       EL111[secB][LT2](RLD) 	       EL111[secB][LT2](RLD) 	       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	
+		       PC110[secB][LT2](AM) 	       IC101[secB][LT2](AKR) 	       EL111[secB][LT2](RLD) 	       EL111[secB][LT2](RLD) 	       EL111[secB][LT2](RLD) 	
 
 		       MC112[CEP202](RP) 	       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC123[CEP202](SP) 	
 
 (Semester 3)	       CT204[secA][LT3](HP) 	       IT216[secA][LT3](PB) 	       IT216[secA][LT3](PB) 	       IT216[secA][LT3](PB) 	       IT227[secA][LT3](AKM) 	
 
-		      CT204[secB][CEP102](PK)	      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	      IT227[secB][CEP102](SB)	
+		      HM216[secB][CEP102](SJ)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	 		FREE		
 
 		       MC212[CEP203](RC) 	       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC214[CEP203](SS) 	
 
 (Semester 5)	      IT304[secA][CEP110](PKS)	      CT303[secA][CEP110](AJ)	      CT303[secA][CEP110](AJ)	      CT303[secA][CEP110](AJ)	      IE402[secA][CEP110](MK2)	
 
-		      IT304[secB][CEP105](PKS)	      CT303[secB][CEP105](DKG)	      CT303[secB][CEP105](DKG)	      CT303[secB][CEP105](DKG)	      IE411[secB][CEP105](SS)	
+		      IT314[secB][CEP105](ST)	      IT304[secB][CEP105](PKS)	      IT304[secB][CEP105](PKS)	      IT304[secB][CEP105](PKS)	      CT303[secB][CEP105](DKG)	
 
 		       MC312[CEP205](MT) 	       MC313[CEP205](PK2) 	       MC313[CEP205](PK2) 	       MC313[CEP205](PK2) 	       MC314[CEP205](GS) 	
 
 (Semester 7)	      IE406[secA][CEP110](MVJ)	      CT425[secA][CEP110](DKG)	      CT425[secA][CEP110](DKG)	      CT425[secA][CEP110](DKG)	      CT437[secA][CEP110](HP)	
 
-		      IE406[secB][CEP112](MVJ)	      EL467[secB][CEP112](YA)	      EL467[secB][CEP112](YA)	      EL467[secB][CEP112](YA)	      IT414[secB][CEP112](JP)	
+		      IE407[secB][CEP112](VSP)	      IE406[secB][CEP112](MVJ)	      IE406[secB][CEP112](MVJ)	      IE406[secB][CEP112](MVJ)	      EL467[secB][CEP112](YA)	
 
 		      IT486(MnC)[CEP206](AMM)	      IT496(MnC)[CEP206](AR2)	      IT496(MnC)[CEP206](AR2)	      IT496(MnC)[CEP206](AR2)	      IT555(MnC)[CEP206](SDG)	
 
 MTech:
 
-(Semester 1)	       SC470[CEP207](VS) 	       IE406[CEP207](MVJ) 	       IE406[CEP207](MVJ) 	       IE406[CEP207](MVJ) 	       IT582[CEP207](PA) 	
+(Semester 1)	       SC470[CEP207](VS) 	 		FREE		 		FREE		 		FREE		       IE406[CEP207](MVJ) 	
 
-(Semester 2)	       IT489[CEP209](MKG) 	       IT524[CEP209](MVJ) 	       IT524[CEP209](MVJ) 	       IT524[CEP209](MVJ) 	       EL453[CEP209](RP) 	
+(Semester 2)	       IT489[CEP209](MKG) 	 		FREE		 		FREE		 		FREE		 		FREE		
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 10am - 11am:
@@ -73,33 +73,33 @@ BTech:
 
 (Semester 1)	       SC107[secA][LT1](MKG) 	       SC107[secA][LT1](MKG) 	       SC107[secA][LT1](MKG) 	 		FREE		 		FREE		
 
-		       SC107[secB][LT2](SB2) 	       SC107[secB][LT2](SB2) 	       SC107[secB][LT2](SB2) 	 		FREE		 		FREE		
+		       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	       SC107[secB][LT2](SB2) 	       SC107[secB][LT2](SB2) 	
 
 		       MC123[CEP202](SP) 	       MC123[CEP202](SP) 	 		FREE		 		FREE		 		FREE		
 
 (Semester 3)	       IT227[secA][LT3](AKM) 	       IT227[secA][LT3](AKM) 	       SC223[secA][LT3](AT) 	       SC223[secA][LT3](AT) 	       SC223[secA][LT3](AT) 	
 
-		      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	
+		 		FREE		 		FREE		      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	
 
 		       MC214[CEP203](SS) 	       MC214[CEP203](SS) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	
 
 (Semester 5)	      IE402[secA][CEP110](MK2)	      IE402[secA][CEP110](MK2)	 		FREE		 		FREE		 		FREE		
 
-		      IE411[secB][CEP105](SS)	      IE411[secB][CEP105](SS)	 		FREE		 		FREE		 		FREE		
+		      CT303[secB][CEP105](DKG)	      CT303[secB][CEP105](DKG)	      IE411[secB][CEP105](SS)	      IE411[secB][CEP105](SS)	      IE411[secB][CEP105](SS)	
 
 		       MC314[CEP205](GS) 	       MC314[CEP205](GS) 	 		FREE		 		FREE		 		FREE		
 
 (Semester 7)	      CT437[secA][CEP110](HP)	      CT437[secA][CEP110](HP)	 		FREE		 		FREE		 		FREE		
 
-		      IT414[secB][CEP112](JP)	      IT414[secB][CEP112](JP)	 		FREE		 		FREE		 		FREE		
+		      EL467[secB][CEP112](YA)	      EL467[secB][CEP112](YA)	      IT414[secB][CEP112](JP)	      IT414[secB][CEP112](JP)	      IT414[secB][CEP112](JP)	
 
 		      IT555(MnC)[CEP206](SDG)	      IT555(MnC)[CEP206](SDG)	 		FREE		 		FREE		 		FREE		
 
 MTech:
 
-(Semester 1)	       IT582[CEP207](PA) 	       IT582[CEP207](PA) 	 		FREE		 		FREE		 		FREE		
+(Semester 1)	       IE406[CEP207](MVJ) 	       IE406[CEP207](MVJ) 	       IT582[CEP207](PA) 	       IT582[CEP207](PA) 	       IT582[CEP207](PA) 	
 
-(Semester 2)	       EL453[CEP209](RP) 	       EL453[CEP209](RP) 	 		FREE		 		FREE		 		FREE		
+(Semester 2)	 		FREE		 		FREE		       IT524[CEP209](MVJ) 	       IT524[CEP209](MVJ) 	       IT524[CEP209](MVJ) 	
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 11am - 12pm:
@@ -107,13 +107,13 @@ BTech:
 
 (Semester 1)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		       SC107[secB][LT2](SB2) 	 		FREE		 		FREE		 		FREE		 		FREE		
 
 		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
 (Semester 3)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	
 
 		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
@@ -133,7 +133,7 @@ MTech:
 
 (Semester 1)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-(Semester 2)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+(Semester 2)	       EL453[CEP209](RP) 	       EL453[CEP209](RP) 	       EL453[CEP209](RP) 	 		FREE		 		FREE		
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12pm - 1pm:
@@ -147,7 +147,7 @@ BTech:
 
 (Semester 3)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		      SC223[secB][CEP102](RM)	 		FREE		 		FREE		 		FREE		 		FREE		
 
 		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
