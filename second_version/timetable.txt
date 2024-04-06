@@ -1,3 +1,4 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Time Slot	              Monday		             Tuesday		           Wednesday		            Thursday		              Friday		
 ____________________________________________________________________________________________________________________________________________________________________________________
  8am - 9am:
@@ -7,13 +8,13 @@ BTech:
 
 		 		FREE		 		FREE		 		FREE		       PC110[secB][LT2](AM) 	       PC110[secB][LT2](AM) 	
 
-		       MC111[CEP202](VS) 	       MC111[CEP202](VS) 	       MC111[CEP202](VS) 	       MC112[CEP202](RP) 	       MC112[CEP202](RP) 	
+		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
 (Semester 3)	       HM216[secA][LT3](SJ) 	       HM216[secA][LT3](SJ) 	       HM216[secA][LT3](SJ) 	       CT204[secA][LT3](HP) 	       CT204[secA][LT3](HP) 	
 
 		 		FREE		 		FREE		 		FREE		      HM216[secB][CEP102](SJ)	      HM216[secB][CEP102](SJ)	
 
-		       MC211[CEP203](MS) 	       MC211[CEP203](MS) 	       MC211[CEP203](MS) 	       MC212[CEP203](RC) 	       MC212[CEP203](RC) 	
+		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
 (Semester 5)	      IT314[secA][CEP110](ST)	      IT314[secA][CEP110](ST)	      IT314[secA][CEP110](ST)	      IT304[secA][CEP110](PKS)	      IT304[secA][CEP110](PKS)	
 
@@ -41,13 +42,13 @@ BTech:
 
 		       PC110[secB][LT2](AM) 	       IC101[secB][LT2](AKR) 	       EL111[secB][LT2](RLD) 	       EL111[secB][LT2](RLD) 	       EL111[secB][LT2](RLD) 	
 
-		       MC112[CEP202](RP) 	       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC123[CEP202](SP) 	
+		 		FREE		      PC110[MnC][CEP202](AM)	      PC110[MnC][CEP202](AM)	      PC110[MnC][CEP202](AM)	       MC111[CEP202](VS) 	
 
 (Semester 3)	       CT204[secA][LT3](HP) 	       IT216[secA][LT3](PB) 	       IT216[secA][LT3](PB) 	       IT216[secA][LT3](PB) 	       IT227[secA][LT3](AKM) 	
 
-		      HM216[secB][CEP102](SJ)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	 		FREE		
+		      HM216[secB][CEP102](SJ)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	      CT204[secB][CEP102](PK)	      IT216[secB][CEP102](SP)	
 
-		       MC212[CEP203](RC) 	       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC214[CEP203](SS) 	
+		 		FREE		      HM216[MnC][CEP203](SJ)	      HM216[MnC][CEP203](SJ)	      HM216[MnC][CEP203](SJ)	       MC211[CEP203](MS) 	
 
 (Semester 5)	      IT304[secA][CEP110](PKS)	      CT303[secA][CEP110](AJ)	      CT303[secA][CEP110](AJ)	      CT303[secA][CEP110](AJ)	      IE402[secA][CEP110](MK2)	
 
@@ -75,13 +76,13 @@ BTech:
 
 		       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	       IT112[secB][LT2](MK) 	       SC107[secB][LT2](SB2) 	       SC107[secB][LT2](SB2) 	
 
-		       MC123[CEP202](SP) 	       MC123[CEP202](SP) 	 		FREE		 		FREE		 		FREE		
+		       MC111[CEP202](VS) 	       MC111[CEP202](VS) 	       MC112[CEP202](RP) 	       MC112[CEP202](RP) 	       MC112[CEP202](RP) 	
 
 (Semester 3)	       IT227[secA][LT3](AKM) 	       IT227[secA][LT3](AKM) 	       SC223[secA][LT3](AT) 	       SC223[secA][LT3](AT) 	       SC223[secA][LT3](AT) 	
 
-		 		FREE		 		FREE		      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	
+		      IT216[secB][CEP102](SP)	      IT216[secB][CEP102](SP)	      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	
 
-		       MC214[CEP203](SS) 	       MC214[CEP203](SS) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	
+		       MC211[CEP203](MS) 	       MC211[CEP203](MS) 	       MC212[CEP203](RC) 	       MC212[CEP203](RC) 	       MC212[CEP203](RC) 	
 
 (Semester 5)	      IE402[secA][CEP110](MK2)	      IE402[secA][CEP110](MK2)	 		FREE		 		FREE		 		FREE		
 
@@ -109,13 +110,13 @@ BTech:
 
 		       SC107[secB][LT2](SB2) 	 		FREE		 		FREE		 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC116[CEP202](SR) 	       MC123[CEP202](SP) 	       MC123[CEP202](SP) 	
 
 (Semester 3)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      IT227[secB][CEP102](SB)	      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	
+		      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	      SC223[secB][CEP102](RM)	 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC213[CEP203](AT2) 	       MC214[CEP203](SS) 	       MC214[CEP203](SS) 	
 
 (Semester 5)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
@@ -143,13 +144,13 @@ BTech:
 
 		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+		       MC123[CEP202](SP) 	 		FREE		 		FREE		 		FREE		 		FREE		
 
 (Semester 3)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
-		      SC223[secB][CEP102](RM)	 		FREE		 		FREE		 		FREE		 		FREE		
-
 		 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
+
+		       MC214[CEP203](SS) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	       MC216[CEP203](SK) 	 		FREE		
 
 (Semester 5)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
@@ -170,5 +171,5 @@ MTech:
 (Semester 2)	 		FREE		 		FREE		 		FREE		 		FREE		 		FREE		
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------____________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________
 

@@ -4,7 +4,7 @@ Day: Monday
 	Classroom: LT1
 	Course: PC110[secA]
 
-	Time: 8am - 9am
+	Time: 9am - 10am
 	Classroom: LT2
 	Course: PC110[secB]
 
@@ -14,9 +14,9 @@ Day: Tuesday
 	Classroom: LT1
 	Course: PC110[secA]
 
-	Time: 8am - 9am
-	Classroom: LT2
-	Course: PC110[secB]
+	Time: 9am - 10am
+	Classroom: CEP202
+	Course: PC110[MnC]
 
 
 Day: Wednesday
@@ -24,12 +24,24 @@ Day: Wednesday
 	Classroom: LT1
 	Course: PC110[secA]
 
+	Time: 9am - 10am
+	Classroom: CEP202
+	Course: PC110[MnC]
+
+
+Day: Thursday
 	Time: 8am - 9am
 	Classroom: LT2
 	Course: PC110[secB]
 
+	Time: 9am - 10am
+	Classroom: CEP202
+	Course: PC110[MnC]
 
-Day: Thursday
 
 Day: Friday
+	Time: 8am - 9am
+	Classroom: LT2
+	Course: PC110[secB]
+
 
