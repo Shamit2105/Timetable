@@ -1,4 +1,4 @@
-Timetable for Faculty: AM
+Timetable for Faculty: AM!
 Day: Monday
 	Time: 8am - 9am
 	Classroom: LT1
