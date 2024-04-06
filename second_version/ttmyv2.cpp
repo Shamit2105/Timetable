@@ -34,39 +34,39 @@ public:
         cout << "ENTER 1 for Autumn Semester and 2 for Winter Semester:" << endl;
         cin >> odd_even_sem;
         cout << "ENTER CLASSROOMS";
-        for(int i=0;i<14;i++)
+        for(int i=0;i<22;i++)
         {
             cout << "ENTER CLASSROOM "<<(i+1)<<" :";
             string t;
             cin >> t;
             classrooms.push_back(t);
         }
-        timetable.resize(time_slots.size() * 14, vector<vector<tuple<string, string, string>>>(days.size()));//Resizing the timetable vector
+        timetable.resize(time_slots.size() * 22, vector<vector<tuple<string, string, string>>>(days.size()));//Resizing the timetable vector
     }
     void input()
     {
-        courses.resize(14);
-        course_name.resize(14);
-        credits.resize(14);
-        faculty.resize(14);
-        no_of_hours.resize(14);
+        courses.resize(22);
+        course_name.resize(22);
+        credits.resize(22);
+        faculty.resize(22);
+        no_of_hours.resize(22);
         int oes=odd_even_sem;//To print the semester in cmd output
-        for (int i = 0; i < 14; i++)
+        for (int i = 0; i < 22; i++)
         {
-            if(i==12)
+            if(i==12||i==13||i==16||i==17||i==18)
             {
-                cout << "Enter Details for MTech Semester 1:" <<  endl;
-                cout << "Enter No. of Courses for MTech Semester 1:"   << endl;
+                cout << "Enter Details for Masters Semester 1:" <<  endl;
+                cout << "Enter No. of Courses for Masters Semester 1:"   << endl;
             }
-            else if(i==13)
+            else if(i==14||i==15||i==19||i==20||i==21)
             {
-                cout << "Enter Details for MTech Semester 3:" <<  endl;
-                cout << "Enter No. of Courses for MTech Semester 3:"   << endl;
+                cout << "Enter Details for Masters Semester 3:" <<  endl;
+                cout << "Enter No. of Courses for Masters Semester 3:"   << endl;
             }
             else
             {
-                cout << "Enter Details for B Tech Semester " << (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1<< endl;
-                cout << "Enter No. of Courses for B Tech Semester " << (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1  << endl;
+                cout << "Enter Details for B Tech Semester " << (i / 22 * 4 + (i % 22) / 3) % 4*2 + 1<< endl;
+                cout << "Enter No. of Courses for B Tech Semester " << (i / 22 * 4 + (i % 22) / 3) % 4*2 + 1  << endl;
             }
 
             int num_of_courses;
@@ -108,12 +108,12 @@ public:
         vector<vector<int>> lectures_assigned(courses.size(), vector<int>(courses[0].size(), 0));
         // Define a map to store the faculty assigned to each time slot and day
         map<pair<int, int>, unordered_set<string>> faculty_assigned;
-
+        map<pair<int, int>, string> last_faculty;
         for (int i = 0; i < time_slots.size(); ++i)
         {
             bool faculty_available = true;
             // Loop through each semester (subrow)
-            for (int semester = 0; semester < 14; ++semester)
+            for (int semester = 0; semester < 22; ++semester)
             {
                 string cr = classrooms[semester]; // Classroom for the semester
                 // Loop through each day (column)
@@ -145,12 +145,17 @@ public:
                                             faculty_available = false;
                                             break;
                                         }
+                                        if (last_faculty.count({i - 1, j}) && faculty_assigned_to_course.back() == '!' && last_faculty[{i - 1, j}].back() == '!')
+                                        {
+                                            faculty_available = false;
+                                            break;
+                                        }
                                     
 
                                     if (faculty_available)
                                     {
                                         // Assign the course to this time slot, semester, and day
-                                        timetable[14 * i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
+                                        timetable[22 * i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
                                         lectures_assigned[all_courses][course_index]++;
                                         faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
                                         course_assigned = true;
@@ -168,7 +173,7 @@ public:
                     // If no course is assigned, mark this slot as "Free" for this particular time_slot and day
                     if (!course_assigned)
                     {
-                        timetable[i * 14+ semester][j].push_back({"Free", "", ""});
+                        timetable[i * 22+ semester][j].push_back({"Free", "", ""});
                     }
                 }
             }
@@ -193,36 +198,72 @@ public:
             // Write the timetable data
             for (int i = 0; i < timetable.size(); ++i) 
             {
-                if((i%14)+1==1)
-                    outfile << setw(10) << time_slots[i / 14]<<":";
+                if((i%22)+1==1)
+                    outfile << setw(10) << time_slots[i / 22]<<":";
                 setw(10);
                 if(odd_even_sem==1)
                 {
                     int x=i;
-                    if(i%14==0)
+                    if(i%22==0)
                     {
                         outfile << "\nBTech:"<<endl;
                     }
-                    else if(i%14==12)
+                    else if(i%22==12)
                     {
                         outfile<<"\nMTech:"<<endl;
                     }
-                    if(((i%14))%3==0&&((i%14)+1!=14)&&((i%14)+1!=13))
+                    else if (i%22==16)
+                        outfile<<"\nMSc:"<<endl;
+                    if(((i%22))%3==0&&((i%22)+1!=22)&&((i%22)+1!=13)&&i%22<12)
                     {  
                         
-                        int semester_number = (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1; // Calculating odd semester number
-                        outfile << "\n(Semester " << to_string(semester_number) << ")\t"; // Odd semester info
+                        int semester_number = (i / 22 * 4 + (i % 22) / 3) % 4*2 + 1; // Calculating odd semester number
+                        outfile << "\n(Semester " << to_string(semester_number) << ")\n"; // Odd semester info
                     }
-                    else if((i%14)+1==14)
+                    else if((i%22)+1==15||(i%22)+1==20)
                     {
-                        outfile <<"\n(Semester 2)\t";
+                        outfile <<"\n(Semester 3)\n";
                     }
-                    else if((i%14)+1==13)
+                    else if((i%22)+1==13||(i%22)+1==17)
                     {
-                        outfile <<"\n(Semester 1)\t";
+                        outfile <<"\n(Semester 1)\n";
+                    }
+                    
+                    
+                    if(i%22<12&&(i+1)%3==1)
+                    {
+                        outfile << "ICT   \t\t";
+                    }
+                    else if(i%22<12&&(i+1)%3==2)
+                    {
+                        outfile << "ICT+CS\t\t";
+                    }
+                    else if(i%22<12&&(i+1)%3==0)
+                    {
+                        outfile << "MnC\t\t";
+                    }
+                    else if(i%22<16&&i%22>=12&&(i+1)%2==1)
+                    {
+                        outfile << "ICT\t\t";
+                    }
+                    else if(i%22<16&&i%22>=12&&(i+1)%2==0)
+                        outfile << "EC\t\t";
+                    else if(i%22>=16&&(i+1)%3==2)
+                    {
+                        outfile << "IT\t\t";
+                    }
+                    else if(i%22>=16&&(i+1)%3==0)
+                    {
+                        outfile << "DS\t\t";
+                    }
+                    else if(i%22>=16&&(i+1)%3==1)
+                    {
+                        outfile << "AA\t\t";
                     }
                     else
-                        outfile <<"\n\t\t";
+                        outfile << "\n\t\t";
+                    
+                    
                     
                 }
                 else
@@ -248,7 +289,7 @@ public:
                             {
                                 if(get<0>(course_classroom_faculty)[0]=='M'&&get<0>(course_classroom_faculty)[1]=='C')
                                     outfile <<setw(7)<<"  " <<get<0>(course_classroom_faculty) << "[" << get<1>(course_classroom_faculty) << "](" << get<2>(course_classroom_faculty) << ") \t";
-                                else if((i%14)+1==13||(i%14)+1==14)
+                                else if((i%22)+1>=13)
                                     outfile <<setw(7)<<"  " <<get<0>(course_classroom_faculty) << "[" << get<1>(course_classroom_faculty) << "](" << get<2>(course_classroom_faculty) << ") \t";
                                 else
                                 {    
@@ -267,7 +308,7 @@ public:
                 }
                 
                 outfile <<endl;
-                if((i%14)+1==14) 
+                if((i%22)+1==22) 
                 {
                     outfile<<endl;
                     for(int i =0;i<180;i++)//after every time slot, we print a dotted line so that the the timetable.txt file looks organized
