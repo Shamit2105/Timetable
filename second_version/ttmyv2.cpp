@@ -34,24 +34,24 @@ public:
         cout << "ENTER 1 for Autumn Semester and 2 for Winter Semester:" << endl;
         cin >> odd_even_sem;
         cout << "ENTER CLASSROOMS";
-        for(int i=0;i<12;i++)
+        for(int i=0;i<14;i++)
         {
             cout << "ENTER CLASSROOM "<<(i+1)<<" :";
             string t;
             cin >> t;
             classrooms.push_back(t);
         }
-        timetable.resize(time_slots.size() * 12, vector<vector<tuple<string, string, string>>>(days.size()));//Resizing the timetable vector
+        timetable.resize(time_slots.size() * 14, vector<vector<tuple<string, string, string>>>(days.size()));//Resizing the timetable vector
     }
     void input()
     {
-        courses.resize(12);
-        course_name.resize(12);
-        credits.resize(12);
-        faculty.resize(12);
-        no_of_hours.resize(12);
+        courses.resize(14);
+        course_name.resize(14);
+        credits.resize(14);
+        faculty.resize(14);
+        no_of_hours.resize(14);
         int oes=odd_even_sem;//To print the semester in cmd output
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 14; i++)
         {
             cout << "Enter Details for Semester " << oes << endl;
             cout << "Enter No. of Courses for Semester " << oes << endl;
@@ -96,7 +96,7 @@ public:
         for (int i = 0; i < time_slots.size(); ++i)
         {
             // Loop through each semester (subrow)
-            for (int semester = 0; semester < 12; ++semester)
+            for (int semester = 0; semester < 14; ++semester)
             {
                 string cr = classrooms[semester]; // Classroom for the semester
                 // Loop through each day (column)
@@ -118,7 +118,7 @@ public:
                                     string faculty_assigned_to_course = faculty[all_courses][course_index];
 
                                     // Assign the course to this time slot, semester, and day
-                                    timetable[12* i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
+                                    timetable[14* i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
                                     lectures_assigned[all_courses][course_index]++;
                                     faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
                                     course_assigned = true;
@@ -135,7 +135,7 @@ public:
                     // If no course is assigned, mark this slot as "Free" for this particular time_slot and day
                     if (!course_assigned)
                     {
-                        timetable[i * 12+ semester][j].push_back({"Free", "", ""});
+                        timetable[i * 14+ semester][j].push_back({"Free", "", ""});
                     }
                 }
             }
@@ -160,17 +160,33 @@ public:
             // Write the timetable data
             for (int i = 0; i < timetable.size(); ++i) 
             {
-                if((i%12)+1==1)
-                    outfile << setw(10) << time_slots[i / 12]<<":";
+                if((i%14)+1==1)
+                    outfile << setw(10) << time_slots[i / 14]<<":";
                 setw(10);
                 if(odd_even_sem==1)
                 {
                     int x=i;
-                    if(((i%12))%3==0)
+                    if(i%14==0)
+                    {
+                        outfile << "\nBTech:"<<endl;
+                    }
+                    else if(i%14==12)
+                    {
+                        outfile<<"\nMTech:"<<endl;
+                    }
+                    if(((i%14))%3==0&&((i%14)+1!=14)&&((i%14)+1!=13))
                     {  
                         
-                        int semester_number = (i / 12 * 4 + (i % 12) / 3) % 4*2 + 1; // Calculating odd semester number
+                        int semester_number = (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1; // Calculating odd semester number
                         outfile << "\n(Semester " << to_string(semester_number) << ")\t"; // Odd semester info
+                    }
+                    else if((i%14)+1==14)
+                    {
+                        outfile <<"\n(Semester 2)\t";
+                    }
+                    else if((i%14)+1==13)
+                    {
+                        outfile <<"\n(Semester 1)\t";
                     }
                     else
                         outfile <<"\n\t\t";
@@ -199,6 +215,8 @@ public:
                             {
                                 if(get<0>(course_classroom_faculty)[0]=='M'&&get<0>(course_classroom_faculty)[1]=='C')
                                     outfile <<setw(7)<<"  " <<get<0>(course_classroom_faculty) << "[" << get<1>(course_classroom_faculty) << "](" << get<2>(course_classroom_faculty) << ") \t";
+                                else if((i%14)+1==13||(i%14)+1==14)
+                                    outfile <<setw(7)<<"  " <<get<0>(course_classroom_faculty) << "[" << get<1>(course_classroom_faculty) << "](" << get<2>(course_classroom_faculty) << ") \t";
                                 else
                                 {    
                                 if(get<1>(course_classroom_faculty)[0]=='L')
@@ -216,7 +234,7 @@ public:
                 }
                 
                 outfile <<endl;
-                if((i%12)+1==12) 
+                if((i%14)+1==14) 
                 {
                     outfile<<endl;
                     for(int i =0;i<180;i++)//after every time slot, we print a dotted line so that the the timetable.txt file looks organized
@@ -247,8 +265,8 @@ public:
             {
                 
                 bool found = false;
-                for (int semester = 0; semester < 12; ++semester) {
-                    for (const auto& slot : timetable[12 * i + semester][j]) 
+                for (int semester = 0; semester < 14; ++semester) {
+                    for (const auto& slot : timetable[14 * i + semester][j]) 
                     {
                         if (get<2>(slot) == faculty_name) 
                         {
