@@ -53,8 +53,22 @@ public:
         int oes=odd_even_sem;//To print the semester in cmd output
         for (int i = 0; i < 14; i++)
         {
-            cout << "Enter Details for Semester " << oes << endl;
-            cout << "Enter No. of Courses for Semester " << oes << endl;
+            if(i==12)
+            {
+                cout << "Enter Details for MTech Semester 1:" <<  endl;
+                cout << "Enter No. of Courses for MTech Semester 1:"   << endl;
+            }
+            else if(i==13)
+            {
+                cout << "Enter Details for MTech Semester 3:" <<  endl;
+                cout << "Enter No. of Courses for MTech Semester 3:"   << endl;
+            }
+            else
+            {
+                cout << "Enter Details for B Tech Semester " << (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1<< endl;
+                cout << "Enter No. of Courses for B Tech Semester " << (i / 14 * 4 + (i % 14) / 3) % 4*2 + 1  << endl;
+            }
+
             int num_of_courses;
             cin >> num_of_courses;
             oes+=2;
@@ -95,6 +109,7 @@ public:
 
         for (int i = 0; i < time_slots.size(); ++i)
         {
+            bool faculty_available = true;
             // Loop through each semester (subrow)
             for (int semester = 0; semester < 14; ++semester)
             {
@@ -102,6 +117,7 @@ public:
                 // Loop through each day (column)
                 for (int j = 0; j < days.size(); ++j)
                 {
+                    
                     // Assign courses to this time slot, semester, and day
                     bool course_assigned = false;
                     for (int all_courses = 0; all_courses < courses.size(); ++all_courses)
@@ -117,12 +133,26 @@ public:
                                     string course_id = courses[all_courses][course_index];
                                     string faculty_assigned_to_course = faculty[all_courses][course_index];
 
-                                    // Assign the course to this time slot, semester, and day
-                                    timetable[14* i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
-                                    lectures_assigned[all_courses][course_index]++;
-                                    faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
-                                    course_assigned = true;
-                                    break; // Move to the next semester
+                                    // Check if the faculty is already assigned to teach another course during this time slot and day
+                                    bool faculty_available = true;
+                                    
+                                
+                                        if (faculty_assigned[{i, j}].count(faculty_assigned_to_course) > 0)
+                                        {
+                                            faculty_available = false;
+                                            break;
+                                        }
+                                    
+
+                                    if (faculty_available)
+                                    {
+                                        // Assign the course to this time slot, semester, and day
+                                        timetable[14 * i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
+                                        lectures_assigned[all_courses][course_index]++;
+                                        faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
+                                        course_assigned = true;
+                                        break; // Move to the next semester
+                                    }
                                 }
                             }
                         }
