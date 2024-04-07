@@ -15,6 +15,5 @@ All memebers contributed in thinking about the main algorithm of the code presen
 2)Devansh Shah (202301136) : Input files for odd semester and provied code for void displayClassroomTimetable() that creates a text file having output of timetable for a classroom for entire week.
 
 3)Shamit Gandhi (202301041) : Handled void input(), handled faculty clashes in void generateTimetable(), handled how to output the main file in void generateTimetable(), wrote pseudocode, Time and Space Complexities with 
-Tirth Boghani, explained main algorithm, How We Reached Here in the document, and improved formatting of output in both void displayFacultySchedule() and void displayClassroomTimetable(). 
-
+Tirth Boghani, explained main algorithm, How We Reached Here in the document, and improved formatting of output in both void displayFacultySchedule() and void displayClassroomTimetable().
 4) Tirth Boghani (202301041) Handled faculty breaks in void generateTimetable(), wrote Pseudocode,Time and Space Complexities with Shamit Gandhi, and Why Choose This Data Structure?, Constraints Checked in the document file.
