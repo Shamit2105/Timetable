@@ -2,7 +2,7 @@ Timetable for Classroom: LT1
 Day: Monday
 	Time: 8am - 9am
 	Course: PC110[secA]
-	Faculty: AM!
+	Faculty: AM
 
 	Time: 9am - 10am
 	Course: EL111[secA]
@@ -10,13 +10,13 @@ Day: Monday
 
 	Time: 11am - 12pm
 	Course: SC107[secA]
-	Faculty: MKG!
+	Faculty: MKG
 
 
 Day: Tuesday
 	Time: 8am - 9am
 	Course: PC110[secA]
-	Faculty: AM!
+	Faculty: AM
 
 	Time: 9am - 10am
 	Course: EL111[secA]
@@ -24,13 +24,13 @@ Day: Tuesday
 
 	Time: 11am - 12pm
 	Course: SC107[secA]
-	Faculty: MKG!
+	Faculty: MKG
 
 
 Day: Wednesday
 	Time: 8am - 9am
 	Course: PC110[secA]
-	Faculty: AM!
+	Faculty: AM
 
 	Time: 9am - 10am
 	Course: IT112[secA]
@@ -38,13 +38,13 @@ Day: Wednesday
 
 	Time: 11am - 12pm
 	Course: SC107[secA]
-	Faculty: MKG!
+	Faculty: MKG
 
 
 Day: Thursday
 	Time: 8am - 9am
 	Course: IC101[secA]
-	Faculty: AKR
+	Faculty: AKR!
 
 	Time: 9am - 10am
 	Course: IT112[secA]
