@@ -162,6 +162,7 @@ public:
                                     {
                                         // Assign the course to this time slot, semester, and day
                                         timetable[22 * i + semester][j].push_back({course_id, cr, faculty_assigned_to_course});
+                    // 22*i refers to the base index of time slot andand then adding semester allows us to differentiate between different semesters within that time slot.
                                         lectures_assigned[sem_courses][course_index]++;
                                         faculty_assigned[{i, j}].insert(faculty_assigned_to_course);
                                         course_assigned = true;
