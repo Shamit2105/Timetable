@@ -10,7 +10,7 @@ M Tech as well as M Sc and checks many constraints as mentioned in the document 
 Contribution:
 All memebers contributed in thinking about the main algorithm of the code present in void generateTimetable()
 
-1)Bhavya Bhanvadiya (202301123) : Input files for even semester and provided code for void displayFacultySchedule() that creates a text file having output of timetable for a faculty for entire week.
+1)Bhavya Bhanvadiya (202301123) : Input files for even semester and provided code for void displayFacultySchedule() that creates a text file having output of timetable for a faculty for entire week. Also helped in figuring the logic to avoid clashes by use of data structures(set and map).
 
 2)Devansh Shah (202301136) : Input files for odd semester and provied code for void displayClassroomTimetable() that creates a text file having output of timetable for a classroom for entire week.
 
